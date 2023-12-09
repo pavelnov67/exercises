@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <h1>Связаться с нами!</h1>
+    <form id="feedback">
+        <div>
+        <div>Фамилия:</div>
+        <input type="text" name="surname" value="Smith">
+        </div>
+        <br>
+        <div>
+        <div>Имя:</div>
+        <input type="text" name="name" value="John">
+        </div>
+        <br>
+        <div>
+        <div>Отчество:</div>
+        <input type="text" name="lastname" value="Jr">
+        </div>
+        <br>
+        <div>Тема сообщения:</div>
+        <select name="Case">
+            <option value="1">Жалоба</option>
+            <option value="2">Предложение</option>
+            <option value="3">Пожелание</option>
+            <option value="4">Требование</option>
+        </select>
+        <br><br>
+        <div>
+            <input type="checkbox" name="request">Получить ответ по E-mail<br><br>
+        <div>
+        <div>
+        <input type="submit" value="Отправить сообщение">
+        <input type="reset" value="Очистить форму">
+        </div>
+    </form>
     <script src="scripts.js"></script>
 </body>
+
 </html>

@@ -242,6 +242,7 @@ nameAge("Конь", 115);
 
 //задача: получить сумму зп
 
+/*
 let salaries = {
     John: 100,
     Ann: 'zero',
@@ -254,7 +255,7 @@ for (let key in salaries) {
     sum += salaries[key];
 }
 }
-console.log(sum);
+console.log(sum);*/
 
 /*function multiplyNumeric(salaries) {
     for (let key in salaries) {
@@ -266,3 +267,136 @@ console.log(sum);
 multiplyNumeric(salaries);
 console.log(salaries);
 */
+
+//задача: Написать объект ladder - объект, который позволяет подниматься вверх и спускаться.
+//Пример работы должен быть таким:
+//ladder.showStep(); // 0 (выводит ступеньку на который мы находимся)
+//ladder.up(); 
+//ladder.up();
+//ladder.showStep(); // 2
+//ladder.down();
+//ladder.showStep(); // 1
+
+/*let num1 = 30 //Number(prompt("Введите число, до которого нужно считать:"));
+let num2 = 20 //Number(prompt("Введите число, до которого нужно считать:"));
+if (num1 >= num2) {
+    while (num1 >= num2) {
+        if (num1 % 3 === 0) {
+            console.log(num1);
+            
+        }
+        num1--;
+    }
+} else {
+    while (num1 <= num2) {
+        if (num1 % 3 === 0) {
+        console.log(num1);
+        }
+        num1++;
+      }
+}*/
+
+/*
+function askSquare() {
+  let num = +prompt('введите число');
+  num *= num;
+  return(console.log(num));
+}
+askSquare(); */
+
+/*let a = 5;
+
+let res = a => Math.pow(a, 3); // метод возведения числа в степень 3
+
+
+console.log(res(a));*/
+
+//Перед вами программа, которая сперва запрашивает у пользователя сумму,
+// а потом спрашивает, какую операцию он хочет с ней совершить: внести эту сумму на счет
+// или снять эту сумму со счета. Если сумма снятия превышает баланс, программа выводит сообщение о недостатке средств.
+
+/*
+let bankAccount = {
+  balance: 500,
+
+  deposit: function(amount) {
+    this.balance += amount;
+    console.log(this.balance);
+  },
+
+  withdraw: function(amount) {
+     if (this.balance >= amount) {
+         this.balance -= amount;
+         console.log(this.balance);
+     } else {
+         console.log('Недостаточно средств на счете');
+     };
+  },
+};
+
+const amount = Number(prompt());
+const choice = prompt();
+
+if (choice === "внести") {
+    bankAccount.deposit(amount);
+} else if (choice === "снять") {
+    bankAccount.withdraw(amount);
+};
+*/
+
+/* Создайте объект budget со свойствами income (доход) и expenses (расходы), 
+значения которых вводятся пользователем и методом calculateProfit, 
+который высчитывает прибыль по следующей формуле:
+
+Прибыль = доход - расходы
+Если прибыль положительная, программа выводит значение прибыли. Если прибыль равна нулю,
+ программа выводит сообщение о том, что пользователь отработал в ноль. Если прибыль отрицательна,
+ программа выводит насколько пользователь ушел в минус. 
+
+Используйте интерполяцию.
+
+let budget = {};
+
+budget.income = +prompt('введите доход');
+budget.expenses = +prompt('введите расходы');
+budget.calculateProfit = function() {
+  let res = budget.income - budget.expenses;
+  if (res < 0) {
+    return -res;
+  }
+  return res;
+}
+
+function rez() {
+  if (budget.income > budget.expenses) {
+      console.log(`Ваша прибыль составляет ${budget.calculateProfit()} рублей`);
+  } else if (budget.income < budget.expenses) {
+      console.log(`Вы ушли в минус на ${budget.calculateProfit()} рублей`);
+  } else {
+      console.log('Вы отработали в ноль');
+  }
+}
+
+rez(budget.income, budget.expenses);
+*/
+
+/* Перед вами программа, которая принимает название товара, цену товара за штуку и количество товара
+ и выводит сообщение в определенном формате с помощью функции calculateTotal с тремя параметрами. 
+ Напишите функцию calculateTotal. Используйте интерполяцию.
+
+const itemName = prompt();
+const itemPrice = Number(prompt());
+const quantity = Number(prompt());
+const calculateTotal = function() {
+  console.log(`Вы выбрали ${quantity} товаров \"${itemName}\" по цене ${itemPrice} рублей за штуку. Итого: ${quantity * itemPrice} рублей.`);
+}
+const message = calculateTotal(itemName, itemPrice, quantity);
+*/
+
+let str = 'f2d2s2a2w2e2r2t2t2y2q';
+let a = str.length;
+for (let i = 1; i <= (str.length - 1); i++) {
+    str = str.toUpperCase();
+    console.log(str[i]);
+    i++;
+};
